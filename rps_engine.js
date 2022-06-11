@@ -1,4 +1,4 @@
-
+/*
 //inital RPS Enginee: Performing Malformed Fizzbuzz to pick rock, paper, or scissors!
 function computer_play() {
     var computer_raw_choice = Math.floor(Math.random() * 101);
@@ -13,6 +13,7 @@ function computer_play() {
     }
 }
 //Takes user input
+
 function Player_play(){
 var choice = prompt("Enter Rock, Paper, or Scissors!");
 if(choice == "rock" || choice == "Rock" || choice == "ROCK"){
@@ -59,3 +60,4 @@ else{
 }
 }
 game_engine()
+*/
