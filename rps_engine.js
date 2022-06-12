@@ -1,63 +1,47 @@
-/*
-//inital RPS Enginee: Performing Malformed Fizzbuzz to pick rock, paper, or scissors!
-function computer_play() {
-    var computer_raw_choice = Math.floor(Math.random() * 101);
-    if(computer_raw_choice % 5 == 0){
-        return 1;
+function player_selection(){
+const r = document.getElementById("rock");
+const p = document.getElementById("paper");
+const s = document.getElementById("scissors");
+r.addEventListener('click', function(){ assignVal(1); });
+p.addEventListener('click', function(){ assignVal(2); });
+s.addEventListener('click', function(){ assignVal(3); });
+}
+
+function assignVal(num){
+    var x = num; 
+    computer_selection(x);
+}
+
+function computer_selection(player_pick){
+    const computer_pick = (Math.floor(Math.random() * 3) + 1);
+    game_engine(player_pick, computer_pick);
+}
+
+function game_engine(player, computer){
+    if(player == computer){         //TIE EVENt
+        document.write("TIE!");
     }
-    else if(computer_raw_choice % 3 == 0){
-        return 2;
+    else if(player == 1 && computer == 3){  //ROCK V. Scissors
+        document.write("Player wins!");
+    }
+    else if(player == 3 && computer == 1){ // Scissors V. Rock
+        document.write("Computer wins!");
+    }
+    else if(player > computer ){        // Natural flow of Greater then 
+        document.write("Player wins!");
+    }
+    else if(player < computer){         // Natural flow of Greater then
+        document.write("Computer wins");
     }
     else{
-        return 3;
+        document.write("NO CLEAR WINNER!");
     }
 }
-//Takes user input
 
-function Player_play(){
-var choice = prompt("Enter Rock, Paper, or Scissors!");
-if(choice == "rock" || choice == "Rock" || choice == "ROCK"){
-    return 1;
-}
-else if(choice == "paper" || choice == "Paper" || choice == "PAPER"){
-    return 2;
-}
-else if(choice == "scissors" || choice == "Scissors" ||choice == "SCISSORS" ){
-    return 3;
-}
-else{
-    alert("Error! Please Enter Rock, Paper, or Scissors!");
-    Player_play(); 
-}
-}
+player_selection();
 
-//Controls Game Flow!
-function Play_round( user_choice, computer_choice){
-if(user_choice == computer_choice){
-    return 1;
-    
-}
-else if(user_choice > computer_choice){
-    return 2;
-}
-else{
-    return 3;
-}
-}
 
-function game_engine(){
-for(let x = 0; x < 5; x++){
-var round_decision = Play_round(Player_play(), computer_play());
-if(round_decision == 1){
-    document.write("TIE");
-}
-else if(round_decision == 2){
-    document.write("USER WINS!");
-}
-else{
-    document.write("COMPUTER WINS!");
-}
-}
-}
-game_engine()
-*/
+
+
+
+

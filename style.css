@@ -20,18 +20,19 @@
     align-items: center;
     font-size: 36px;
 }
-.images{
-    display: flex;
-    justify-content: center;
-    gap: 0px 10px;
-    padding-top: 2%;
-}
 .pc_images{
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     gap: 0px 10px;
-    padding-top: 1%;
+    padding-top: 2%;
+}
+.player_images{
+    display: flex;
+    justify-content: center;
+    gap: 0px 10px;
+    padding-top: 10%;
+    cursor: pointer;
 }
 img{
     display: flex;
@@ -39,5 +40,5 @@ img{
     justify-content: center;
     gap: 20%;
     border: solid 3px; 
-    cursor: pointer;
+    
 }
