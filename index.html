@@ -6,35 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors!</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
-    <div class="flex-container">
     <div class="Text">
         <h1>Rock, Paper, Scissors</h1>
     </div>
-    <div class="Subtext">
-        <p class="Winner"></p>
-        <p class="round_counter">Rounds played: 0</p>
+<div id="Game_content">
+    <div class="flex-container">
+        <div class="Stats">
+            <p class="Winner"></p>
+            <p class="round_counter_text">Rounds played: </p><p class="round_counter">0</p>
+            <p class="Player_count_text">Player Wins: </p><p class="player_count">0</p>
+            <p class="computer_count_text">Computer Wins: </p><p class="computer_count">0</p>
+        </div>
 
     </div>
-    <div class="Subtext"><p class="computer_count">"c:"</p></div>
     <div class = "pc_images">
     <img id = "PC_rock" src="images/Rock.png" alt="Rock">
     <img id = "PC_paper" src="images/Paper.png" alt="Paper">
     <img id = "PC_scissors" src="images/Scissors.png" alt="Scissors">
-    </div>  
+    </div>
     <div class = "image_w_l">
         <img id ="computer_i" src="">
         <img id="player_i" src="">
     </div>
-    <div class="Subtext"><p class="player_count">"P;"</p></div>
     <div class = "player_images">
         <img id = "rock" src="images/Rock.png" alt="Rock">
         <img id = "paper" src="images/Paper.png" alt="Paper">
         <img id = "scissors" src="images/Scissors.png" alt="Scissors">
-    </div>  
+    </div>
 </div>
+<div id="end_game">
+    <div id="endscreencontent">
+    <h1 class="End_Winner"></h1>
+    <button class="button">Play Again!</button>
+    </div>
+</div>
+
 <script src="main.js"></script>
 </body>
 </html>
