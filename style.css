@@ -3,7 +3,7 @@
     padding: 0;
 }
 html{
-  background-color: #222831;
+  background-color: #F6FBF4;
 
 }
 #Game_content{
@@ -17,8 +17,15 @@ html{
     display: flex;
     justify-content: center;
     font-size: 48px;
-    color: #00ADB5;
+    color: #F5DF99;
 }
+.winner_display{
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+    color: #5FD068;
+    font-size: 40px;
+  }
 .Subtext{
     display: flex;
     margin: auto;
@@ -27,16 +34,17 @@ html{
     justify-content: center;
     align-items: center;
     font-size: 36px;
-    color: #EEEEEE;
+    color: #4B8673;
 }
 .Stats{
     display: flex;
-    margin: auto;
+    margin: 0;
     padding: 0;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: flex-end;
+    gap: 0 30px;
     font-size: 36px;
-    color: #EEEEEE;
+    color: #4B8673;
 }
 .pc_images{
     display: flex;
@@ -84,12 +92,12 @@ img{
     flex-direction: column;
     justify-content: center;
     gap: 20%;
-    border: solid #EEEEEE 1px;
+    border: solid #F6FBF4 1px;
 }
 button{
-  background-color: #00ADB5;
+  background-color: #5FD068;
   border: none;
-  color: #EEEEEEEE;
+  color: #F6FBF4;
   padding: 20px;
   text-align: center;
   text-decoration: none;
@@ -102,7 +110,7 @@ button{
 #endscreencontent{
     display: flex;
     flex-flow: column nowrap;
-    color: #EEEEEE;
+    color: #4B8673;
     justify-content: center;
     align-items:center;
     padding-top: 10%;

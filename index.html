@@ -11,11 +11,14 @@
     <div class="Text">
         <h1>Rock, Paper, Scissors</h1>
     </div>
+
 <div id="Game_content">
+    <div class="winner_display">
+        <p class="Winner"></p>
+    </div>
     <div class="flex-container">
         <div class="Stats">
-            <p class="Winner"></p>
-            <p class="round_counter_text">Rounds played: </p><p class="round_counter">0</p>
+            <p class="round_counter_text">Round: </p><p class="round_counter">0</p>
             <p class="Player_count_text">Player Wins: </p><p class="player_count">0</p>
             <p class="computer_count_text">Computer Wins: </p><p class="computer_count">0</p>
         </div>
@@ -39,7 +42,7 @@
 <div id="end_game">
     <div id="endscreencontent">
     <h1 class="End_Winner"></h1>
-    <button class="button">Play Again!</button>
+    <button id="button">Play Again!</button>
     </div>
 </div>
 

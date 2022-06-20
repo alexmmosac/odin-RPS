@@ -1,6 +1,6 @@
 //DONE: Add Player and computer images to middle. 
 //DONE: Add Player and computer Counters. 
-//TODO: Make function to display reset button if Rounds played hits 5. Then Reset all counters. 
+//DONE: Make function to display reset button if Rounds played hits 5. 
 document.getElementById("end_game").style.display= "none";
 function player_selection(){
 const r = document.getElementById("rock");
@@ -35,7 +35,7 @@ function game_engine(player, computer){
     }
     else if(player == 1 && computer == 3){  //ROCK V. Scissors  Player win Increment Player score
         winner_text.innerHTML = "Player Wins!";
-        player_counter.innerHTML = parseInt(rounds_played.innerHTML)+1;
+        player_counter.innerHTML = parseInt(player_counter.innerHTML)+1;
         rounds_played.innerHTML = parseInt(rounds_played.innerHTML)+1;
     }
     else if(player == 3 && computer == 1){ // Scissors V. Rock
@@ -45,7 +45,7 @@ function game_engine(player, computer){
     }
     else if(player > computer ){        // Natural flow of Greater then
         winner_text.innerHTML = "Player Wins!";
-        player_counter.innerHTML = parseInt(rounds_played.innerHTML)+1;
+        player_counter.innerHTML = parseInt(player_counter.innerHTML)+1;
         rounds_played.innerHTML = parseInt(rounds_played.innerHTML)+1;
     }
     else if(player < computer){         // Natural flow of Greater then
@@ -63,24 +63,32 @@ function game_engine(player, computer){
     var computer_counter = document.querySelector(".computer_count");
     var computer_score = parseInt(computer_counter.innerHTML);
 
-    if(count == 5){
+    if(count > 5){
         document.getElementById("Game_content").style.display = "none";
         var end_winner = document.querySelector(".End_Winner");
         if(computer_score > player_score){
             end_winner.innerHTML = "Computer Wins";
             document.getElementById("end_game").style.display= "block";
-         /*
             const play_again = document.getElementById("button");
             play_again.addEventListener('click', function(){ replay(); });
-        */
         }
         else if(computer_score < player_score){
             end_winner.innerHTML = "Player Wins";
             document.getElementById("end_game").style.display= "block";
-          /*
             const play_again = document.getElementById("button");
             play_again.addEventListener('click', function(){ replay(); });
-        */
+        }
+        else if(computer_score == player_score){
+            end_winner.innerHTML = "It's a TIE!";
+            document.getElementById("end_game").style.display= "block";
+            const play_again = document.getElementById("button");
+            play_again.addEventListener('click', function(){ replay(); });
+        }
+        else{
+            end_winner.innerHTML = "ERROR_04: Unable to display Winner.";
+            document.getElementById("end_game").style.display= "block";
+            const play_again = document.getElementById("button");
+            play_again.addEventListener('click', function(){ replay(); });
         }
     }
 }
@@ -115,7 +123,9 @@ function set_versus(player_pick, computer_pick){
 
 }
 
-
+function replay(){
+    location.reload();
+}
 
 
 
